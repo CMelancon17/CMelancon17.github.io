@@ -73,7 +73,12 @@
 			function update() {
 				boxPosition = boxPosition + speed;
 				moveBoxTo(boxPosition);
-
+				if (boxPosition > boardWidth) {
+					speed = speed * -1;
+				}
+				if (boxPosition < 0) {
+					speed = speed * -1;
+				}
 			};
 
 			/* 
