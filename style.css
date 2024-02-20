@@ -67,6 +67,10 @@ h2, h3 {
     color: black;
 }
 
+.content h2 {
+    color: black;
+}
+
 #portfolio {
     list-style-type: none;
     padding-left: 0;
@@ -75,8 +79,8 @@ h2, h3 {
 #portfolio li {
     background: #6d50d6;
     padding: 10px;
-    border-radius: 30px;
-    margin-bottom: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 #portfolio li:hover {
