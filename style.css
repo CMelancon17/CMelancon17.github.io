@@ -12,8 +12,8 @@ body {
 /* navigation menu */
 nav {
     background: rgb(81, 3, 155);
-   margin: 0 auto;
-   margin-bottom: 20px;
+    margin: 0 auto;
+    margin-bottom: 20px;
     display: flex;
     padding: 10px;
 }
@@ -75,8 +75,8 @@ h2, h3 {
 #portfolio li {
     background: #6d50d6;
     padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: 30px;
+    margin-bottom: 30px;
 }
 
 #portfolio li:hover {
