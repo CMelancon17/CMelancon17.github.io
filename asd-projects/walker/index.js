@@ -73,24 +73,22 @@ function runProgram(){
     walker.positionY += walker.speedY
   }
   function redrawGameItem() {
-
     $("#walker").css("left", walker.positionX)
     $("#walker").css("top", walker.positionY)
-   
   }
 
   function wallCollision() {
-    if (walker.positionX > $("#board").width()) {
-      walker.positionX =- walker.speedX
+    if (walker.positionX > $("#board").width()-50) {
+      walker.positionX -= walker.speedX
     }
-    else if (walker.positionX < 0) {
-      walker.positionX =+ walker.speedX
+    if (walker.positionX < 0) {
+      walker.positionX -= walker.speedX
     }
-    else if (walker.positionY > $("#board").height()) {
-      walker.positionY =- walker.speedY
+    if (walker.positionY >= $("#board").height()-47) {
+      walker.positionY -= walker.speedY
     }
-    else if (walker.positionY < 0) {
-      walker.positionY =+ walker.speedY
+    if (walker.positionY < 0) {
+      walker.positionY -= walker.speedY
     }
   }
 
