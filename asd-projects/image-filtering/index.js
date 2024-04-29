@@ -19,9 +19,10 @@ function resetAndRender() {
 // this function applies the filters to the image and is where you should call
 // all of your apply functions
 function applyAndRender() {
+  applyFilter(reddify)
   // Multiple TODOs: Call your apply function(s) here
-  applyFilterNoBackground(reddify)
-  
+  applyFilterNoBackground(increaseGreenByBlue)
+  applyFilterNoBackground(decreaseBlue)
 
   // do not change the below line of code
   render($("#display"), image);
@@ -63,9 +64,7 @@ function applyFilterNoBackground(filterFunction) {
 // TODO 5: Create the keepInBounds function
 
 function keepInBounds(number) {
-  var test1 = Math.max(number,0)
-  return Math.min(test1,255)
-
+  return number < 0 ? 0: number > 255 ? 255: number
 }
 
 
@@ -78,11 +77,13 @@ function reddify(array) {
 // TODO 6: Create more filter functions
 
 function decreaseBlue(array) {
-  array[BLUE] = keepInBounds(BLUE - 50)
+  var blueValue = keepInBounds(array[BLUE] - 50)
+  array[BLUE] = blueValue
 }
 
 function increaseGreenByBlue(array) { 
-  array[GREEN] = keepInBounds(GREEN += BLUE)
+  var greenValue = keepInBounds(array[GREEN] + array[BLUE])
+  array[GREEN] = greenValue
 }
 
 
